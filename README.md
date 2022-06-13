@@ -1,2 +1,2 @@
-# pixel-sketch
-Etch a Sketch project from The Odin Project curriculum
+# Pixel Sketch
+- Etch a Sketch project from The Odin Project curriculum
