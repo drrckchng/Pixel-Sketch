@@ -8,4 +8,14 @@ function createGrid(size) {
 }
 
 const container = document.getElementById('container');
-createGrid(20);
+createGrid(16);
+
+const grids = document.querySelectorAll('.grid');
+grids.forEach(grid => {
+    grid.addEventListener('mouseover', () => grid.classList.add('grid'));
+});
+// Add event listener to all grids using for each
+
+// Create alert/popup to allow user to enter custom num
+// Need to reassign event listeners again
+// Probably can have function to add event listeners

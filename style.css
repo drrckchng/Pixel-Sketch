@@ -7,3 +7,7 @@
     aspect-ratio: 1;
     border: 1px solid black;
 }
+
+.grid.draw {
+    background-color: black;
+}
