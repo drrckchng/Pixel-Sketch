@@ -5,16 +5,31 @@ function createGrid(size) {
         container.appendChild(oneGrid);
     }
     container.style.gridTemplate = `repeat(${size}, 1fr)/repeat(${size}, 1fr)`;
+    selectGrids().forEach(grid => {
+        grid.addEventListener('mouseover', () => grid.classList.add('draw'));
+    });
+}
+
+function clearGrid() {
+    selectGrids().forEach(grid => {
+        grid.remove();
+    });
+}
+
+function selectGrids() {
+    return document.querySelectorAll('.grid');
 }
 
 const container = document.getElementById('container');
-createGrid(16);
+createGrid(24);
 
-const grids = document.querySelectorAll('.grid');
-grids.forEach(grid => {
-    grid.addEventListener('click ', () => grid.classList.add('show'));
- });
-// Add event listener to all grids using for each
+const gridDimension = document.getElementById('grid-number');
+gridDimension.addEventListener('click', function() {
+    let userGridDimension = prompt('Enter grid dimensions: ', 16);
+    clearGrid();
+    createGrid(userGridDimension);
+});
+
 
 // Create alert/popup to allow user to enter custom num
 // Need to reassign event listeners again
