@@ -39,3 +39,9 @@ body {
 .grid.draw {
     background-color: black;
 }
+
+.footer {
+    font-size: 0.5em;
+    padding: 5px;
+    margin-top: auto;
+}
