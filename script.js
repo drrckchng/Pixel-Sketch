@@ -21,16 +21,18 @@ function selectGrids() {
 }
 
 const container = document.getElementById('container');
-createGrid(24);
+const gridDimension = document.getElementById('size');
+const gridSizeValue = document.getElementById('size-value');
+gridSizeValue.innerText = gridDimension.value;
+createGrid(gridDimension.value);
 
-const gridDimension = document.getElementById('grid-number');
-gridDimension.addEventListener('click', function() {
-    let userGridDimension = prompt('Enter grid dimensions: ', 16);
+gridDimension.addEventListener('input', function() {
+    gridSizeValue.innerText = gridDimension.value;
     clearGrid();
-    createGrid(userGridDimension);
+    createGrid(gridDimension.value);
 });
 
-
-// Create alert/popup to allow user to enter custom num
-// Need to reassign event listeners again
-// Probably can have function to add event listeners
+document.getElementById('clear').addEventListener('click', function() {
+    clearGrid();
+    createGrid(gridDimension.value);
+});
