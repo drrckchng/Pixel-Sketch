@@ -21,10 +21,17 @@ function selectGrids() {
 }
 
 const container = document.getElementById('container');
+const colorSelector = document.getElementById('color');
 const gridDimension = document.getElementById('size');
 const gridSizeValue = document.getElementById('size-value');
 gridSizeValue.innerText = gridDimension.value;
 createGrid(gridDimension.value);
+
+colorSelector.addEventListener('change', function () {
+    document.querySelectorAll('.draw').forEach(element => {
+        element.style.backgroundColor = colorSelector.value;
+    });
+});
 
 gridDimension.addEventListener('input', function() {
     gridSizeValue.innerText = gridDimension.value;
