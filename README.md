@@ -1,7 +1,9 @@
 # Pixel Sketch
-[Link to Web App](https://drrckchng.github.io/Pixel-Sketch/)
+Simple Etch-A-Sketch clone
 
-- Etch a Sketch project from The Odin Project curriculum
+![Screenshot](screenshot.png)
+
+[Link](https://drrckchng.github.io/Pixel-Sketch/)
 
 # Technologies
 * HTML
